@@ -276,11 +276,11 @@
         shading: THREE.FlatShading,
     };
     this.label_color = '#aaaaaa';
-    this.dice_color = '#703030';
+    this.dice_color = '#303030';
     this.ambient_light_color = 0xffffff;
     this.spot_light_color = 0xefdfd5;
     this.selector_back_colors = { color: 0x404040, shininess: 0, emissive: 0x858787 };
-    this.desk_color = this.desk_color;
+    this.desk_color = 0xdfdfdf;
     this.use_shadows = true;
 
     this.known_types = ['d4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100'];
@@ -395,7 +395,7 @@
         container.appendChild(this.renderer.domElement);
         this.renderer.shadowMap.enabled = true;
         this.renderer.shadowMap.type = THREE.PCFShadowMap;
-        this.renderer.setClearColor(that.desk_color, 1);
+        this.renderer.setClearColor(that.desk_color || that.ambient_light_color, 1);
 
         this.reinit(container, dimentions);
 

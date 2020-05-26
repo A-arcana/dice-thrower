@@ -41,10 +41,13 @@ function dice_initialize(container) {
         $t.dice.dice_color = '#808080';
         $t.dice.label_color = '#202020';
     }
-    if (params.color == 'red') {
+    else if (params.color == 'red') {
         $t.dice.dice_color = '#703030';
-        $t.dice.label_color = '#aaaaaa';
     }
+    else if (params.color ){
+        $t.dice.dice_color = '#'+params.color;
+    }
+      console.log(params);
 
     var box = new $t.dice.dice_box(canvas, { w: 500, h: 300 });
     box.animate_selector = false;
