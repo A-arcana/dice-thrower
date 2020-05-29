@@ -28,3 +28,4 @@ jobs:
       with:
         project-id: '${{ secrets.GLITCH_PROJECT_ID}}'
         auth-token: '${{ secrets.GLITCH_AUTH_TOKEN }}'
+
