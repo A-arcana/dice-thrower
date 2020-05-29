@@ -16,7 +16,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "dotenv": "^8.2.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "http": "0.0.1-security"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-express"
